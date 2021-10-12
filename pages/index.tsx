@@ -3,7 +3,6 @@ import { useGlobalContext } from '../context'
 
 const Homepage = () => {
   const { error, totalPlayers } = useGlobalContext()
-  console.log(`error`, error)
   return (
     <div>
       <Navbar />
