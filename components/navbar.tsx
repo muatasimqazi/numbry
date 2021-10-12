@@ -1,4 +1,3 @@
-// import CricektBat from '../assets/cricketball.svg'
 import CricektBat from '../assets/cricket-bat.svg'
 
 const Navbar = () => {
@@ -8,8 +7,10 @@ const Navbar = () => {
         <div className="w-full relative flex justify-between lg:w-auto  px-4 lg:static lg:block lg:justify-start">
           <a className="focus:outline-none" href="/">
             <div className="flex items-center no-underline">
-              <CricektBat/>
-              <h1 className="text-xl font-bold tracking-tight mb-0 pt-4 pl-0">Numbery</h1>
+              <CricektBat />
+              <h1 className="text-xl font-bold tracking-tight mb-0 pt-4 pl-0">
+                Numbry
+              </h1>
             </div>
           </a>
           <button
