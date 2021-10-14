@@ -4,7 +4,6 @@ import Head from 'next/head'
 import type { AppProps } from 'next/app'
 import { MyGlobalContext } from '../context'
 import '../styles/base.css'
-import * as ga from '../lib/ga'
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
   const [totalPlayers, setTotalPlayers] = useState(0)
@@ -14,14 +13,11 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
 
   useEffect(() => {
     const handleRouteChange = (url: string) => {
-      ga.pageview(url)
+      window.gtag('config', process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS, {
+        page_path: url,
+      })
     }
-    //When the component is mounted, subscribe to router changes
-    //and log those page views
     router.events.on('routeChangeComplete', handleRouteChange)
-
-    // If the component is unmounted, unsubscribe
-    // from the event with the `off` method
     return () => {
       router.events.off('routeChangeComplete', handleRouteChange)
     }

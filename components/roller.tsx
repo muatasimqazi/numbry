@@ -22,7 +22,6 @@ const Roller = () => {
           className="border-2 border-gray-400 border-r-0 rounded-l-md bg-white h-12 px-5 pr-16 w-full focus:outline-none"
           placeholder="Enter number of players"
           inputMode="numeric"
-          pattern="[0-9]"
           onChange={(e) => {
             setTotalPlayers(0)
             setError('')
