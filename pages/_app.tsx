@@ -23,7 +23,6 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
     }
   }, [router.events])
 
-
   return (
     <MyGlobalContext.Provider
       value={{ totalPlayers, setTotalPlayers, error, setError }}
@@ -81,6 +80,10 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
           `,
             }}
           />
+          <script
+            async
+            src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${process.env.NEXT_PUBLIC_GOOGLE_AD_SENSE}`}
+          ></script>
         </Head>
         <Component {...pageProps} />
       </>
